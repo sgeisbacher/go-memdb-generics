@@ -6,6 +6,7 @@
 package memdb
 
 import (
+	"fmt"
 	"sync"
 	"sync/atomic"
 	"unsafe"
@@ -37,6 +38,7 @@ type MemDB struct {
 
 // NewMemDB creates a new MemDB with the given schema.
 func NewMemDB(schema *DBSchema) (*MemDB, error) {
+	fmt.Println("hello from the sgeisbacher fork")
 	// Validate the schema
 	if err := schema.Validate(); err != nil {
 		return nil, err
